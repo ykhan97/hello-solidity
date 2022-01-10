@@ -6,10 +6,22 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ykhan97/hello-solidity.git"
+  },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ykhan97/hello-solidity/issues"
+  },
+  "homepage": "https://github.com/ykhan97/hello-solidity#readme",
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.4",
+    "ethers": "^5.5.3",
+    "hardhat": "^2.8.2"
+  },
   "dependencies": {
-    "solc": "^0.8.11",
-    "web3": "^1.6.1"
+    "dotenv": "^10.0.0"
   }
 }
