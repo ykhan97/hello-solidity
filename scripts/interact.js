@@ -5,6 +5,8 @@ const PRIVATE_KEY = process.env.PRIVATE_KEY;
 
 const { ethers } = require("hardhat");
 const contract = require("../artifacts/contracts/HelloWorld.sol/HelloWorld.json");
+console.log(JSON.stringify(contract.abi));
+
 
 //provider - Alchemy
 const alchemyProvider = new ethers.providers.AlchemyProvider(network="ropsten", API_KEY);
@@ -20,7 +22,7 @@ async function main() {
     console.log("The message is: " + message);
 
     console.log("Updating the message...");
-    const tx = await helloWorldContract.update("this is the new message");
+    const tx = await helloWorldContract.update("Hello World (again)!");
     await tx.wait();
 
     const newMessage = await helloWorldContract.message();
